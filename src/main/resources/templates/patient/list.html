@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Patients list</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row"><h2>Patients List</h2></div>
+    <div class="row">
+        <a th:href="@{/patient/add}" class="btn btn-primary btn-md active mb-2">Add a new patient</a>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Family Name</th>
+                <th>Date of birth</th>
+                <th>Gender</th>
+                <th>Postal address</th>
+                <th>Phone number</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="patient : ${patients}">
+                <td style="width: 10%" th:text="${patient.id}"></td>
+                <td th:text="${patient.name}"></td>
+                <td th:text="${patient.familyName}"></td>
+                <td th:text="${#dates.format(patient.dateOfBirth, 'dd/MM/yyyy')}"></td>
+                <td th:text="${patient.gender}"></td>
+                <td th:text="${!patient.postalAddress.isEmpty()} ? ${patient.postalAddress} : 'empty'"></td>
+                <td th:text="${!patient.phoneNumber.isEmpty()} ? ${patient.phoneNumber} : 'empty'"></td>
+                <td class="text-center">
+                    <a th:href="@{/patient/update/{id}(id=${patient.id})}">Edit</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
