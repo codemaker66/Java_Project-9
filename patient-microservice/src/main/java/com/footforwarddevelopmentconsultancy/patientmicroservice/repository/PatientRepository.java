@@ -1,10 +1,9 @@
-package com.footforwarddevelopmentconsultancy.mediscreen.repository;
+package com.footforwarddevelopmentconsultancy.patientmicroservice.repository;
 
-import com.footforwarddevelopmentconsultancy.mediscreen.entity.Patient;
+import com.footforwarddevelopmentconsultancy.patientmicroservice.entity.Patient;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 
 @Repository

@@ -1,6 +1,6 @@
 package com.footforwarddevelopmentconsultancy.mediscreen.controller;
 
-import com.footforwarddevelopmentconsultancy.mediscreen.entity.Patient;
+import com.footforwarddevelopmentconsultancy.mediscreen.model.Patient;
 import com.footforwarddevelopmentconsultancy.mediscreen.exceptions.ResourceException;
 import com.footforwarddevelopmentconsultancy.mediscreen.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
 
 @Controller
@@ -51,7 +50,6 @@ public class PatientController {
 
     @PostMapping(value = "/patient/update/{id}")
     public String updateAPatient(@Valid Patient patient, BindingResult bindingResult) {
-
         if (bindingResult.hasErrors()) {
             return "patient/update";
         }

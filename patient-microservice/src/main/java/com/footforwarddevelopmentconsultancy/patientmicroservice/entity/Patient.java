@@ -1,10 +1,6 @@
-package com.footforwarddevelopmentconsultancy.mediscreen.entity;
-
-import org.springframework.format.annotation.DateTimeFormat;
+package com.footforwarddevelopmentconsultancy.patientmicroservice.entity;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Entity
@@ -13,16 +9,11 @@ public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @NotBlank(message = "Name is mandatory")
     private String name;
     @Column(name = "family_name")
-    @NotBlank(message = "Family Name is mandatory")
     private String familyName;
     @Column(name = "date_of_birth")
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @NotNull(message = "Date Of Birth is mandatory")
     private Date dateOfBirth;
-    @NotBlank(message = "Gender is mandatory")
     private String gender;
     @Column(name = "postal_address")
     private String postalAddress;

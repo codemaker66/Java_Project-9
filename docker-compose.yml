@@ -4,3 +4,7 @@ services:
         image: mediscreen
         ports:
             - 8080:8080
+    patient-microservice-server:
+        image: patient-microservice
+        ports:
+            - 8081:8081

@@ -1,10 +1,9 @@
-package com.footforwarddevelopmentconsultancy.mediscreen.service;
+package com.footforwarddevelopmentconsultancy.patientmicroservice.service;
 
-import com.footforwarddevelopmentconsultancy.mediscreen.entity.Patient;
-import com.footforwarddevelopmentconsultancy.mediscreen.repository.PatientRepository;
+import com.footforwarddevelopmentconsultancy.patientmicroservice.entity.Patient;
+import com.footforwarddevelopmentconsultancy.patientmicroservice.repository.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -15,9 +14,7 @@ public class PatientService {
 
     public List<Patient> findAllPatients() { return patientRepository.retrieveAllPatients(); }
 
-    public Patient findPatientById(int id) {
-        return patientRepository.findById(id);
-    }
+    public Patient findPatientById(int id) { return patientRepository.findById(id); }
 
     public void updatePatientData(Patient patient) {
         patientRepository.save(patient);
@@ -26,5 +23,4 @@ public class PatientService {
     public void registerThePatient(Patient patient) {
         patientRepository.save(patient);
     }
-
 }
