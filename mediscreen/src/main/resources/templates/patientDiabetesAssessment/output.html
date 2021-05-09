@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Diabetes Assessment</title>
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <a style="margin-top: 10px;" href="/patients" th:href="@{/patients}" class="btn btn-primary">Go Back To Patients List</a>
+    </div>
+    <div style="margin-top: 10px;" class="row"><h2>Patient Diabetes Assessment :</h2></div>
+    <div class="row">
+        <p th:text="${'Patient :' + ' ' + output.name + ' ' + output.familyName + ' ' + '(age' + ' ' + output.age + ')' + ' ' + 'diabetes assessment is :' + ' ' + output.diabetesAssessment}"></p>
+    </div>
+</div>
+</body>
+</html>

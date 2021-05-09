@@ -21,7 +21,7 @@ public class PatientService {
     }
 
     public Patient findPatientById(int id) {
-        String URL = "http://patient-microservice-server:8081/find/patient/" + id;
+        String URL = "http://patient-microservice-server:8081/find/patientById/" + id;
         ResponseEntity<Patient> response = restTemplate.exchange(URL, HttpMethod.GET, null, Patient.class);
         return response.getBody();
     }
@@ -38,4 +38,9 @@ public class PatientService {
         restTemplate.exchange(URL, HttpMethod.POST, entity, Patient.class);
     }
 
+    public Patient findPatientByFamilyName(String familyName) {
+        String URL = "http://patient-microservice-server:8081/find/patientByFamilyName/" + familyName;
+        ResponseEntity<Patient> response = restTemplate.exchange(URL, HttpMethod.GET, null, Patient.class);
+        return response.getBody();
+    }
 }

@@ -23,4 +23,8 @@ public class PatientService {
     public void registerThePatient(Patient patient) {
         patientRepository.save(patient);
     }
+
+    public Patient findPatientByFamilyName(String familyName) {
+        return patientRepository.findByFamilyName(familyName);
+    }
 }

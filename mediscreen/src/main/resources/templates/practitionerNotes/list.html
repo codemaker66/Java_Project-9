@@ -2,14 +2,19 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Patient History list</title>
+    <title>Practitioner Notes History list</title>
     <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
 </head>
 <body>
 <div class="container">
-    <div class="row"><h2 th:text="${patient.name + ' ' + patient.familyName + ' ' + 'Notes/Recommendations List :'}"></h2></div>
     <div class="row">
-        <a th:href="@{/practitionerNotes/add/{id}(id=${patient.id})}" th:text="${'Add Notes/Recommendations For' + ' ' + patient.name + ' ' + patient.familyName}"  class="btn btn-primary btn-md active mb-2"></a>
+        <a style="margin-top: 10px;" href="/patients" th:href="@{/patients}" class="btn btn-primary">Go Back To Patients List</a>
+    </div>
+    <div class="row">
+        <h2 style="margin-top: 10px;" th:text="${'Notes/Recommendations List For Patient  :' + ' ' + patient.name + ' ' + patient.familyName}"></h2>
+    </div>
+    <div class="row">
+        <a th:href="@{/practitionerNotes/add/{id}(id=${patient.id})}" th:text="${'Add Notes/Recommendations For Patient :' + ' ' + patient.name + ' ' + patient.familyName}"  class="btn btn-primary btn-md active mb-2"></a>
         <table class="table table-bordered">
             <thead>
             <tr>
@@ -23,7 +28,7 @@
                 <td style="width: 10%" th:text="${note.id}"></td>
                 <td th:text="${note.notesAndRecommendations}"></td>
                 <td class="text-center">
-                    <a th:href="@{/practitionerNotes/update/{id}(id=${note.id})}">Edit</a>
+                    <a class="btn btn-primary" th:href="@{/practitionerNotes/update/{id}(id=${note.id})}">Edit Notes/Recommendations</a>
                 </td>
             </tr>
             </tbody>

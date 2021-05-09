@@ -2,24 +2,24 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Patients list</title>
+    <title>Patients List</title>
     <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
 </head>
 <body>
 <div class="container">
     <div class="row"><h2>Patients List</h2></div>
     <div class="row">
-        <a th:href="@{/patient/add}" class="btn btn-primary btn-md active mb-2">Add a new patient</a>
+        <a th:href="@{/patient/add}" class="btn btn-primary btn-md active mb-2">Add A New Patient</a>
         <table class="table table-bordered">
             <thead>
             <tr>
                 <th>Id</th>
                 <th>Name</th>
                 <th>Family Name</th>
-                <th>Date of birth</th>
+                <th>Date Of Birth</th>
                 <th>Gender</th>
-                <th>Postal address</th>
-                <th>Phone number</th>
+                <th>Postal Address</th>
+                <th>Phone Number</th>
                 <th>Action</th>
             </tr>
             </thead>
@@ -33,7 +33,9 @@
                 <td th:text="${!patient.postalAddress.isEmpty()} ? ${patient.postalAddress} : 'empty'"></td>
                 <td th:text="${!patient.phoneNumber.isEmpty()} ? ${patient.phoneNumber} : 'empty'"></td>
                 <td class="text-center">
-                    <a th:href="@{/patient/update/{id}(id=${patient.id})}">Edit</a>
+                    <a class="btn btn-primary" style="display: block; margin-top: 10px;" th:href="@{/patient/update/{id}(id=${patient.id})}">Edit Patient Data</a>
+                    <a class="btn btn-primary" style="display: block; margin-top: 10px;" th:href="@{/practitionerNotesHistory/{id}(id=${patient.id})}">View Practitioner Notes History</a>
+                    <a class="btn btn-primary" style="display: block; margin-top: 10px;" th:href="@{/assessById/{id}(id=${patient.id})}">View Patient Diabetes Assessment</a>
                 </td>
             </tr>
             </tbody>

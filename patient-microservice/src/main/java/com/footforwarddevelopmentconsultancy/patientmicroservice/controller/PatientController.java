@@ -17,7 +17,7 @@ public class PatientController {
         return patientService.findAllPatients();
     }
 
-    @GetMapping(value = "/find/patient/{id}")
+    @GetMapping(value = "/find/patientById/{id}")
     public Patient getPatient(@PathVariable("id") int id) {
         return patientService.findPatientById(id);
     }
@@ -30,5 +30,10 @@ public class PatientController {
     @PostMapping(value = "/patient/update")
     public void updateAPatient(@RequestBody Patient patient) {
         patientService.updatePatientData(patient);
+    }
+
+    @GetMapping(value = "/find/patientByFamilyName/{familyName}")
+    public Patient getPatient(@PathVariable("familyName") String familyName) {
+        return patientService.findPatientByFamilyName(familyName);
     }
 }

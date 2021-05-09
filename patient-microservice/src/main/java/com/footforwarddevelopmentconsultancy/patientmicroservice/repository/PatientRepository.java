@@ -14,4 +14,7 @@ public interface PatientRepository extends CrudRepository<Patient, Integer> {
 
     @Query(value = "SELECT * FROM patients WHERE patients.id = :id", nativeQuery = true)
     Patient findById(int id);
+
+    @Query(value = "SELECT * FROM patients WHERE patients.family_name = :familyName", nativeQuery = true)
+    Patient findByFamilyName(String familyName);
 }

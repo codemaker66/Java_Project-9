@@ -12,3 +12,7 @@ services:
         image: practitioner-microservice
         ports:
             - 8082:8082
+    diabetes-anticipator-microservice-server:
+        image: diabetes-anticipator-microservice
+        ports:
+            - 8083:8083
