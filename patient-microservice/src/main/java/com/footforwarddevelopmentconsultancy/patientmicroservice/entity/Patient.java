@@ -1,7 +1,7 @@
 package com.footforwarddevelopmentconsultancy.patientmicroservice.entity;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "patients")
@@ -13,7 +13,7 @@ public class Patient {
     @Column(name = "family_name")
     private String familyName;
     @Column(name = "date_of_birth")
-    private Date dateOfBirth;
+    private LocalDate dateOfBirth;
     private String gender;
     @Column(name = "postal_address")
     private String postalAddress;
@@ -44,11 +44,11 @@ public class Patient {
         this.familyName = familyName;
     }
 
-    public Date getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 

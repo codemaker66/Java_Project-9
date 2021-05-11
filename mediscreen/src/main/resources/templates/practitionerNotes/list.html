@@ -11,14 +11,14 @@
         <a style="margin-top: 10px;" href="/patients" th:href="@{/patients}" class="btn btn-primary">Go Back To Patients List</a>
     </div>
     <div class="row">
-        <h2 style="margin-top: 10px;" th:text="${'Notes/Recommendations List For Patient  :' + ' ' + patient.name + ' ' + patient.familyName}"></h2>
+        <h2 style="margin-top: 10px;" th:text="${'Notes/Recommendations List For Patient :' + ' ' + patient.name + ' ' + patient.familyName}"></h2>
     </div>
     <div class="row">
         <a th:href="@{/practitionerNotes/add/{id}(id=${patient.id})}" th:text="${'Add Notes/Recommendations For Patient :' + ' ' + patient.name + ' ' + patient.familyName}"  class="btn btn-primary btn-md active mb-2"></a>
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th>Note Id</th>
+                <th>Notes/Recommendations Id</th>
                 <th>Practitioner Notes/Recommendations</th>
                 <th>Action</th>
             </tr>

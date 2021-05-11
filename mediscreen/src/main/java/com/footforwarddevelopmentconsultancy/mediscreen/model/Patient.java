@@ -3,7 +3,7 @@ package com.footforwarddevelopmentconsultancy.mediscreen.model;
 import org.springframework.format.annotation.DateTimeFormat;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Patient {
     private int id;
@@ -13,7 +13,7 @@ public class Patient {
     private String familyName;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @NotNull(message = "Date Of Birth is mandatory")
-    private Date dateOfBirth;
+    private LocalDate dateOfBirth;
     @NotBlank(message = "Gender is mandatory")
     private String gender;
     private String postalAddress;
@@ -43,11 +43,11 @@ public class Patient {
         this.familyName = familyName;
     }
 
-    public Date getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 

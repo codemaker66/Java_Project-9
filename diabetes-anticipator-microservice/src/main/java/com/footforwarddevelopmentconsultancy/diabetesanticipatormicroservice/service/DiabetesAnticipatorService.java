@@ -3,10 +3,8 @@ package com.footforwarddevelopmentconsultancy.diabetesanticipatormicroservice.se
 import com.footforwarddevelopmentconsultancy.diabetesanticipatormicroservice.model.Output;
 import com.footforwarddevelopmentconsultancy.diabetesanticipatormicroservice.model.PatientMedicalRecord;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDate;
 import java.time.Period;
-import java.time.ZoneId;
 import java.util.Arrays;
 import java.util.List;
 
@@ -15,16 +13,20 @@ public class DiabetesAnticipatorService {
 
     private final List<String> triggerTermsList = Arrays.asList("Hémoglobine A1C", "Microalbumine", "Taille", "Poids", "Fumeur", "Anormal", "Cholestérol", "Vertige", "Rechute", "Réaction", "Anticorps");
 
+    /**
+     * This method return the result of the patient diabetes assessment.
+     *
+     * @param patientMedicalRecord is an object of type PatientMedicalRecord.
+     * @return an object of type Output.
+     */
     public Output getPatientDiabetesAssessment(PatientMedicalRecord patientMedicalRecord) {
         Output output = new Output();
 
         output.setName(patientMedicalRecord.getName());
         output.setFamilyName(patientMedicalRecord.getFamilyName());
 
-        LocalDate localDate = patientMedicalRecord.getDateOfBirth().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
         LocalDate now = LocalDate.now();
-        int age = Period.between(localDate, now).getYears();
-
+        int age = Period.between(patientMedicalRecord.getDateOfBirth(), now).getYears();
         output.setAge(age);
 
         int triggerNumber = 0;

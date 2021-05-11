@@ -14,7 +14,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,12 +29,21 @@ public class DiabetesAnticipatorController {
     @Autowired
     PractitionerService practitionerService;
 
+    /**
+     * This method get the patient diabetes assessment by his id.
+     *
+     * @param id is the id of the patient.
+     * @param model represent Java-5-specific interface that defines a holder for model attributes.
+     * @return the view that display the patient diabetes assessment.
+     */
     @GetMapping(value = "/assessById/{id}")
     public String getPatientDiabetesAssessmentById(@PathVariable("id") int id, Model model) {
         Patient patient = patientService.findPatientById(id);
+
         if (patient == null) {
             throw new ResourceException(HttpStatus.NOT_FOUND, "There are no patient with the id : " + id + " in the database");
         }
+
         List<Note> note = practitionerService.findPractitionerNotesHistoryById(id);
 
         PatientMedicalRecord patientMedicalRecord = new PatientMedicalRecord();
@@ -44,11 +52,13 @@ public class DiabetesAnticipatorController {
         patientMedicalRecord.setFamilyName(patient.getFamilyName());
         patientMedicalRecord.setDateOfBirth(patient.getDateOfBirth());
         patientMedicalRecord.setGender(patient.getGender());
+
         List<String> list = new ArrayList<>();
+
         for (Note value : note) {
             list.add(value.getNotesAndRecommendations());
-
         }
+
         patientMedicalRecord.setNote(list);
 
         Output output = diabetesAnticipatorService.getPatientDiabetesAssessment(patientMedicalRecord);
@@ -58,12 +68,21 @@ public class DiabetesAnticipatorController {
         return "patientDiabetesAssessment/output";
     }
 
+    /**
+     * This method get the patient diabetes assessment by his family name.
+     *
+     * @param familyName is the family name of the patient.
+     * @param model represent Java-5-specific interface that defines a holder for model attributes.
+     * @return the view that display the patient diabetes assessment.
+     */
     @GetMapping(value = "/assessByFamilyName/{familyName}")
     public String getPatientDiabetesAssessmentByFamilyName(@PathVariable("familyName") String familyName, Model model) {
         Patient patient = patientService.findPatientByFamilyName(familyName);
+
         if (patient == null) {
             throw new ResourceException(HttpStatus.NOT_FOUND, "There are no patient with the family name : " + familyName + " in the database");
         }
+
         List<Note> note = practitionerService.findPractitionerNotesHistoryById(patient.getId());
 
         PatientMedicalRecord patientMedicalRecord = new PatientMedicalRecord();
@@ -72,11 +91,13 @@ public class DiabetesAnticipatorController {
         patientMedicalRecord.setFamilyName(patient.getFamilyName());
         patientMedicalRecord.setDateOfBirth(patient.getDateOfBirth());
         patientMedicalRecord.setGender(patient.getGender());
+
         List<String> list = new ArrayList<>();
+
         for (Note value : note) {
             list.add(value.getNotesAndRecommendations());
-
         }
+
         patientMedicalRecord.setNote(list);
 
         Output output = diabetesAnticipatorService.getPatientDiabetesAssessment(patientMedicalRecord);

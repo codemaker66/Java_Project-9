@@ -28,7 +28,7 @@
                 <td style="width: 10%" th:text="${patient.id}"></td>
                 <td th:text="${patient.name}"></td>
                 <td th:text="${patient.familyName}"></td>
-                <td th:text="${#dates.format(patient.dateOfBirth, 'dd/MM/yyyy')}"></td>
+                <td th:text="${#temporals.format(patient.dateOfBirth, 'dd/MM/yyyy', 'fr')}"></td>
                 <td th:text="${patient.gender}"></td>
                 <td th:text="${!patient.postalAddress.isEmpty()} ? ${patient.postalAddress} : 'empty'"></td>
                 <td th:text="${!patient.phoneNumber.isEmpty()} ? ${patient.phoneNumber} : 'empty'"></td>

@@ -12,9 +12,14 @@ public class DiabetesAnticipatorController {
     @Autowired
     DiabetesAnticipatorService diabetesAnticipatorService;
 
+    /**
+     * This method call the DiabetesAnticipatorService to get patient diabetes assessment.
+     *
+     * @param patientMedicalRecord is an object of type PatientMedicalRecord.
+     * @return an object of type Output.
+     */
     @PostMapping(value = "/getPatientDiabetesAssessment")
     public Output getPatientDiabetesAssessment(@RequestBody PatientMedicalRecord patientMedicalRecord) {
-
         return diabetesAnticipatorService.getPatientDiabetesAssessment(patientMedicalRecord);
     }
 }

@@ -17,18 +17,37 @@ public class PatientController {
     @Autowired
     PatientService patientService;
 
+    /**
+     * This method call the PatientService to find all patients.
+     *
+     * @param model represent Java-5-specific interface that defines a holder for model attributes.
+     * @return the view that display the list of all patients.
+     */
     @GetMapping(value = "/patients")
     public String getAllPatients(Model model) {
         model.addAttribute("patients", patientService.findAllPatients());
         return "patient/list";
     }
 
+    /**
+     * This method display the add form for the user.
+     *
+     * @param model represent Java-5-specific interface that defines a holder for model attributes.
+     * @return the view that display the add form.
+     */
     @GetMapping("/patient/add")
     public String displayTheAddForm(Model model) {
         model.addAttribute("patient", new Patient());
         return "patient/add";
     }
 
+    /**
+     * This method call the PatientService to register the patient.
+     *
+     * @param patient is an object of type Patient.
+     * @param bindingResult is a general interface that represents binding results.
+     * @return a redirection to the patients list if the request was successful.
+     */
     @PostMapping("/patient/register")
     public String addAPatient(@Valid Patient patient, BindingResult bindingResult) {
         if (!bindingResult.hasErrors()) {
@@ -38,6 +57,13 @@ public class PatientController {
         return "patient/add";
     }
 
+    /**
+     * This method display the update form for the user.
+     *
+     * @param id is the id of the patient.
+     * @param model represent Java-5-specific interface that defines a holder for model attributes.
+     * @return the view that display the update form.
+     */
     @GetMapping(value = "/patient/update/{id}")
     public String displayTheUpdateForm(@PathVariable("id") int id, Model model) {
         Patient patient = patientService.findPatientById(id);
@@ -48,7 +74,14 @@ public class PatientController {
         return "patient/update";
     }
 
-    @PostMapping(value = "/patient/update/{id}")
+    /**
+     * This method call the PatientService to update patient data.
+     *
+     * @param patient is an object of type Patient.
+     * @param bindingResult is a general interface that represents binding results.
+     * @return a redirection to the patients list if the request was successful.
+     */
+    @PostMapping(value = "/patient/update")
     public String updateAPatient(@Valid Patient patient, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "patient/update";
@@ -56,6 +89,4 @@ public class PatientController {
         patientService.updatePatientData(patient);
         return "redirect:/patients";
     }
-
-
 }

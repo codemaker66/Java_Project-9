@@ -1,12 +1,12 @@
 package com.footforwarddevelopmentconsultancy.mediscreen.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 public class PatientMedicalRecord {
     private String name;
     private String familyName;
-    private Date dateOfBirth;
+    private LocalDate dateOfBirth;
     private String gender;
     private List<String> note;
 
@@ -26,11 +26,11 @@ public class PatientMedicalRecord {
         this.familyName = familyName;
     }
 
-    public Date getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
