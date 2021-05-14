@@ -1,0 +1,204 @@
+[{
+  "_id": {
+    "$oid": "60980acc91e878484defdc4c"
+  },
+  "patient_id": 1,
+  "notes_and_recommendations": "Le patient déclare qu'il « se sent très bien »",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980b6891e878484defdc4e"
+  },
+  "patient_id": 1,
+  "notes_and_recommendations": "Le patient déclare qu'il se sent fatigué pendant la journée",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980b7591e878484defdc4f"
+  },
+  "patient_id": 1,
+  "notes_and_recommendations": "Le patient déclare qu'il ne se sent pas si fatigué que ça",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980b9391e878484defdc50"
+  },
+  "patient_id": 2,
+  "notes_and_recommendations": "Le patient déclare qu'il ressent beaucoup de stress au travail",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980ba091e878484defdc51"
+  },
+  "patient_id": 2,
+  "notes_and_recommendations": "Le patient déclare avoir fait une réaction aux médicaments au cours des 3 derniers mois",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980bc391e878484defdc52"
+  },
+  "patient_id": 2,
+  "notes_and_recommendations": "Tests de laboratoire indiquant une microalbumine élevée",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980bd391e878484defdc53"
+  },
+  "patient_id": 2,
+  "notes_and_recommendations": "Le patient déclare que tout semble aller bien",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980be391e878484defdc54"
+  },
+  "patient_id": 3,
+  "notes_and_recommendations": "Le patient déclare qu'il fume depuis peu",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980bf191e878484defdc55"
+  },
+  "patient_id": 3,
+  "notes_and_recommendations": "Tests de laboratoire indiquant une microalbumine élevée",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980bfd91e878484defdc56"
+  },
+  "patient_id": 3,
+  "notes_and_recommendations": "Le patient déclare qu'il est fumeur et qu'il a cessé de fumer l'année dernière",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980c5891e878484defdc57"
+  },
+  "patient_id": 3,
+  "notes_and_recommendations": "Tests de laboratoire indiquant un taux de cholestérol LDL élevé",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980c6a91e878484defdc58"
+  },
+  "patient_id": 4,
+  "notes_and_recommendations": "Le patient déclare qu'il lui est devenu difficile de monter les escaliers",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980c8391e878484defdc59"
+  },
+  "patient_id": 4,
+  "notes_and_recommendations": "Le patient déclare qu'il a mal au dos lorsqu'il reste assis pendant longtemps",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980c9e91e878484defdc5a"
+  },
+  "patient_id": 4,
+  "notes_and_recommendations": "Le patient déclare avoir commencé à fumer depuis peu",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980cc891e878484defdc5b"
+  },
+  "patient_id": 5,
+  "notes_and_recommendations": "Le patient déclare avoir des douleurs au cou occasionnellement",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980cf491e878484defdc5c"
+  },
+  "patient_id": 5,
+  "notes_and_recommendations": "Le patient déclare avoir eu plusieurs épisodes de vertige depuis la dernière visite.",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980d0891e878484defdc5d"
+  },
+  "patient_id": 5,
+  "notes_and_recommendations": "Le patient déclare qu'il souffre encore de douleurs cervicales occasionnelles",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980d1b91e878484defdc5e"
+  },
+  "patient_id": 5,
+  "notes_and_recommendations": "Le patient déclare avoir eu plusieurs épisodes de vertige depuis la dernière visite.",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980d5b91e878484defdc5f"
+  },
+  "patient_id": 6,
+  "notes_and_recommendations": "Le patient déclare qu'il se sent bien",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980d6391e878484defdc60"
+  },
+  "patient_id": 6,
+  "notes_and_recommendations": "Le patient déclare qu'il se sent bien",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980d7891e878484defdc61"
+  },
+  "patient_id": 7,
+  "notes_and_recommendations": "Le patient déclare qu'il se réveille souvent avec une raideur articulaire",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980d9191e878484defdc62"
+  },
+  "patient_id": 8,
+  "notes_and_recommendations": "Les tests de laboratoire indiquent que les anticorps sont élevés",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980dab91e878484defdc63"
+  },
+  "patient_id": 9,
+  "notes_and_recommendations": "Le patient déclare avoir de la difficulté à se concentrer sur ses devoirs scolaires",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980dc491e878484defdc64"
+  },
+  "patient_id": 9,
+  "notes_and_recommendations": "Le patient déclare qu'il s’impatiente facilement en cas d’attente prolongée",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980dcf91e878484defdc65"
+  },
+  "patient_id": 9,
+  "notes_and_recommendations": "Le patient signale qu'il est facilement irrité par des broutilles",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980e1491e878484defdc66"
+  },
+  "patient_id": 10,
+  "notes_and_recommendations": "Le patient déclare qu'il n'a aucun problème",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980e1a91e878484defdc67"
+  },
+  "patient_id": 10,
+  "notes_and_recommendations": "Le patient déclare qu'il n'a aucun problème",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980e1c91e878484defdc68"
+  },
+  "patient_id": 10,
+  "notes_and_recommendations": "Le patient déclare qu'il n'a aucun problème",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+},{
+  "_id": {
+    "$oid": "60980e1e91e878484defdc69"
+  },
+  "patient_id": 10,
+  "notes_and_recommendations": "Le patient déclare qu'il n'a aucun problème",
+  "_class": "com.footforwarddevelopmentconsultancy.practitionermicroservice.entity.Note"
+}]
